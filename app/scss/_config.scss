@@ -1,0 +1,27 @@
+// USER VARIABLES SECTION
+$accent: orange; // Accent Color
+$fontsize: 16px; // Body Font Size
+$textcolor: #000; // Text Color
+$lineheight: 1.65; // Document Line Height
+$userfont: Roboto, sans-serif; // User Font Family
+
+// Breakpoint
+$tablet: 1199px;
+$mobile: 767px;
+$mobile-sm: 374px;
+
+// FONTS LOAD SECTION
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format("woff2");
+  }
+}
+
+@include font("Roboto", normal, 400, "../fonts/Roboto-Regular.woff2");
+@include font("Roboto", italic, 400, "../fonts/Roboto-Italic.woff2");
+@include font("Roboto", normal, 500, "../fonts/Roboto-Medium.woff2");
+@include font("Roboto", normal, 700, "../fonts/Roboto-Bold.woff2");
+@include font("Roboto", normal, 900, "../fonts/Roboto-Black.woff2");
